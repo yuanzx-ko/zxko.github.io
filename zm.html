@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>搬砖兔ぴ小窝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        .logo {
+            display: inline-block;
+            margin: 10px 20px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        h1 {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: normal;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        /* 导航菜单 */
+        nav {
+            background-color: #fff;
+            margin-top: 80px;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 50px;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            z-index: 98;
+            overflow-y: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin: 10px 0;
+        }
+
+        nav a {
+            font-size: 16px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* 内容区域 */
+        main {
+            margin-top: 80px;
+            margin-left: 220px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* 手机端样式 */
+        @media screen and (max-width: 600px) {
+            /* 导航菜单 */
+            nav {
+                top: 0;
+                bottom: auto;
+                margin-top: 60px;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                height: 0;
+            }
+
+            nav.open {
+                height: auto;
+            }
+
+            nav ul {
+                overflow: hidden;
+                height: 0;
+            }
+
+            nav li {
+                margin: 5px 0;
+            }
+
+            nav a {
+                border-radius: 0;
+            }
+
+            /* 按钮 */
+            #nav-toggle {
+                display: block;
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 999;
+            }
+
+            #nav-toggle span,
+            #nav-toggle span::before,
+            #nav-toggle span::after {
+                display: block;
+                background-color: #333;
+                height: 3px;
+                width: 25px;
+                border-radius: 3px;
+                position: relative;
+            }
+
+            #nav-toggle span::before,
+            #nav-toggle span::after {
+                content: "";
+                position: absolute;
+                left: 0;
+            }
+
+            #nav-toggle span::before {
+                top: -8px;
+            }
+
+            #nav-toggle span::after {
+                top: 8px;
+            }
+
+            /* 打开菜单时的样式 */
+            nav.open ul {
+                height: auto;
+                overflow: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="logo">
+            <img src="http://cdn.u1.huluxia.com/g4/M02/F4/44/rBAAdmUnW22AAkvXAAQv3narhr0266.png" alt="个人头像">
+            <h1>搬砖兔ぴ小窝</h1>
+        </div>
+    </header>
+
+    <!-- 导航菜单 -->
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">简介</a></li>
+            <li><a href="#media">媒体号</a></li>
+            <li><a href="#contact">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <!-- 按钮 -->
+    <div id="nav-toggle">
+        <span></span>
+    </div>
+
+    <!-- 内容区域 -->
+    <main>
+        <section id="home">
+            <h2>首页</h2>
+            <p>欢迎来到搬砖兔ぴ小窝</p>
+            <img src="home.jpg" alt="首页图片">
+        </section>
+
+        <section id="about">
+            <h2>简介</h2>
+            <p>这是兔兔自己做的网站，做这个网站的目的是希望让更多人了解兔兔</p>
+            <img src="about.jpg" alt="简介图片">
+        </section>
+
+        <section id="media">
+            <h2>媒体号</h2>
+            <p>小红薯号：5310766925  dy号：27832580425</p>
+            <img src="http://cdn.u1.huluxia.com/g4/M02/F4/44/rBAAdmUnW02AeJA8AAMKii5066U176.png" alt="媒体号二维码">
+        </section>
+
+        <section id="contact">
+            <h2>联系方式</h2>
+            <p>如果您有任何问题或建议，请联系我：</p>
+            <ul>
+                <li><a href="tel:123456789">电话：198 3982 9293</a></li>
+                <li><a href="mailto:email@example.com">邮箱：992603016@qq.com</a></li>
+                <li><a href="https://weibo.com/">🐧：992603016</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        // 导航菜单的显示与隐藏
+        var navToggle = document.getElementById("nav-toggle");
+        var navMenu = document.querySelector("nav ul");
+
+        navToggle.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            if (navMenu.classList.contains("open")) {
+                navMenu.classList.remove("open");
+            } else {
+                navMenu.classList.add("open");
+            }
+        });
+    </script>
+</body>
+</html>
